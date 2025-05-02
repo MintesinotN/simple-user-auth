@@ -3,7 +3,9 @@ services:
     name: simple-user-auth
     env: elixir
     buildCommand: ./build.sh
-    startCommand: _build/prod/rel/simple_user_auth/bin/simple_user_auth start
+    startCommand: _build/prod/rel/simple_user_auth/bin/server start
     envVars:
       - key: MIX_ENV
         value: prod
+      - key: SECRET_KEY_BASE
+        value: ENGiO3NoT18nbZ+UC6W7TABgXBzXJ7Q2ooAYI9mInGWVOZ/tDsUZqi58QuD0JBB3
