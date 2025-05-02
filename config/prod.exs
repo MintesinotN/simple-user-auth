@@ -14,6 +14,10 @@ config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: SimpleUserAuth.F
 # Disable Swoosh Local Memory Storage
 config :swoosh, local: false
 
+config :simple_user_auth, SimpleUserAuth.Endpoint,
+url: [host: System.get_env("RENDER_EXTERNAL_HOSTNAME") || "localhost", port: 80],
+cache_static_manifest: "priv/static/cache_manifest.json"
+
 # Do not print debug messages in production
 config :logger, level: :info
 
