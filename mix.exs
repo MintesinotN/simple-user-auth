@@ -10,12 +10,12 @@ defmodule SimpleUserAuth.MixProject do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      releases: [
-        simple_user_auth: [
-          include_executables_for: [:unix],
-          steps: [:assemble, :tar]
-        ]
-      ]
+      # releases: [
+      #   simple_user_auth: [
+      #     include_executables_for: [:unix],
+      #     steps: [:assemble, :tar]
+      #   ]
+      # ]
     ]
   end
 
